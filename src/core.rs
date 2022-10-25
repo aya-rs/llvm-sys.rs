@@ -940,6 +940,11 @@ extern "C" {
     /// `Len` is written to contain the length of the returned string.
     pub fn LLVMGetMDString(V: LLVMValueRef, Len: *mut ::libc::c_uint) -> *const ::libc::c_char;
     pub fn LLVMGetMDNodeNumOperands(V: LLVMValueRef) -> ::libc::c_uint;
+    pub fn LLVMReplaceMDNodeOperandWith(
+        V: LLVMValueRef,
+        Index: ::libc::c_uint,
+        Replacement: LLVMMetadataRef,
+    );
     pub fn LLVMGetMDNodeOperands(V: LLVMValueRef, Dest: *mut LLVMValueRef);
 }
 
