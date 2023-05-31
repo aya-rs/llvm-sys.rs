@@ -755,6 +755,8 @@ extern "C" {
         AlignInBits: u32,
     ) -> LLVMMetadataRef;
 
+    pub fn LLVMGetDINodeTag(MD: LLVMMetadataRef) -> u16;
+
     /// Retrieves the DIVariable associated with this global variable expression.
     pub fn LLVMDIGlobalVariableExpressionGetVariable(GVE: LLVMMetadataRef) -> LLVMMetadataRef;
 
